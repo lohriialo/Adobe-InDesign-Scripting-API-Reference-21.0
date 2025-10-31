@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2025" />
+<meta name="DC.rights.owner" content="(C) Copyright 2025" />
+<meta name="generator" content="DITA-OT" /><meta name="DC.type" content="topic" />
+<meta name="DC.title" content="Path" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="d1e229949" />
+<link rel="stylesheet" type="text/css" href="commonltr.css" />
+<title>Path</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css" />
+<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body id="d1e229949">
+
+   <h1 class="title topictitle1" id="ariaid-title1">
+      <span class="keyword">Path</span>
+   </h1>
+
+   <div class="body">
+      <p class="p description">A path.</p>
+
+      <p class="p quicklinks">
+         Go to <strong class="ph b">
+            <a class="xref" href="#d1e229949__iProps">Property Listing</a>
+         </strong> | <strong class="ph b">
+            <a class="xref" href="#d1e229949__iMethods">Method Listing</a>
+         </strong>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Methods:</h2>
+         
+         <p class="p">
+            <a class="xref" href="#d1e229949__d1e230130">addEventListener</a>,  <a class="xref" href="#d1e229949__d1e230185">getElements</a>,  <a class="xref" href="#d1e229949__d1e230197">remove</a>,  <a class="xref" href="#d1e229949__d1e230202">removeEventListener</a>,  <a class="xref" href="#d1e229949__d1e230257">reverse</a>,  <a class="xref" href="#d1e229949__d1e230263">toSource</a>,  <a class="xref" href="#d1e229949__d1e230273">toSpecifier</a>
+         </p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Objects:</h2>
+         
+         <p class="p">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>, <a class="xref" href="EventListeners.html#d1e29063">EventListeners</a>, <a class="xref" href="Events.html#d1e32369">Events</a>, <a class="xref" href="Number.html#d1e4548">Number</a>, <a class="xref" href="Object.html#d1e538">Object</a>, <a class="xref" href="PathPoints.html#d1e230898">PathPoints</a>, <a class="xref" href="PathType.html#d1e75463">PathType</a>, </p>
+
+      </div>
+
+      <div class="section" id="d1e229949__iProps"><h2 class="title sectiontitle">Property Listing</h2>
+         
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:20%" /><col style="width:10%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e138">
+                        <p class="p">Property</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e144">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e150">
+                        <p class="p">Access</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e156">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">entirePath</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="Array.html#d1e835">Array</a> of  Arrays of 2 Units.</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">A list of the coordinates of all of the path points on the path, including anchor points and left- and right-direction points. When creating a path using this property, supply either a list of anchor point coordinates ([[x1, y1], [x2, y2], ...]) or a list of anchor point, left-direction point, and right-direction point coordinates ([[[x1, y1], [x2, y2], [x3, y3]], [[x4, y4], [x5, y5], [x6, y6]], ...]). Note: Providing only anchor points results in a path on which all of the path points are connected with straight line segments; supplying the positions of left- and right-direction points specifies curved line segments. Can return: Array of Arrays of 2 Units.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">eventListeners</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="EventListeners.html#d1e29063">EventListeners</a>
+                           <em class="ph i">
+                              <a class="xref" href="EventListener.html#d1e26615">EventListener</a>
+                           </em>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">A collection of event listeners.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">events</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="Events.html#d1e32369">Events</a>
+                           <em class="ph i">
+                              <a class="xref" href="Event.html#d1e29436">Event</a>
+                           </em>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">A collection of events.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">index</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">The index of the Path within its containing object.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">isValid</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">Returns true if the object specifier resolves to valid objects.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">parent</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="Button.html#d1e113148">Button</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="ClippingPathSettings.html#d1e292185">ClippingPathSettings</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="EndnoteTextFrame.html#d1e489496">EndnoteTextFrame</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="GraphicLine.html#d1e191457">GraphicLine</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="MediaItem.html#d1e247215">MediaItem</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="Movie.html#d1e146256">Movie</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="MultiStateObject.html#d1e118063">MultiStateObject</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="Oval.html#d1e182946">Oval</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="Polygon.html#d1e195729">Polygon</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="Rectangle.html#d1e187197">Rectangle</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="Sound.html#d1e150630">Sound</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="TextFrame.html#d1e466174">TextFrame</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="TextWrapPreference.html#d1e228429">TextWrapPreference</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="FlexObject.html#d1e252383">FlexObject</a>
+                        </p>
+
+                        <p class="p">
+                           <a class="xref" href="SplineItem.html#d1e231183">SplineItem</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">The parent of the Path (a SplineItem, Polygon, GraphicLine, Rectangle, Oval, TextFrame, EndnoteTextFrame, MediaItem, Sound, Movie, Button, MultiStateObject, ClippingPathSettings, TextWrapPreference or FlexObject).</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">pathPoints</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="PathPoints.html#d1e230898">PathPoints</a>
+                           <em class="ph i">
+                              <a class="xref" href="PathPoint.html#d1e230571">PathPoint</a>
+                           </em>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">A collection of path points.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">pathType</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="PathType.html#d1e75463">PathType</a>
+                        </p>
+
+                        <p class="p enumInPTable clip_button">PathType.CLOSED_PATH</p>
+
+                        <p class="p enumInPTable clip_button">PathType.OPEN_PATH</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">The path type.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e138 ">
+                        <p class="p clip_button">properties</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e144 ">
+                        <p class="p">
+                           <a class="xref" href="Object.html#d1e538">Object</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e150 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e156 ">
+                        <p class="p description">A property that allows setting of several properties at the same time.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+      <div class="section" id="d1e229949__iMethods"><h2 class="title sectiontitle">Method Listing</h2>
+         
+         <p class="p methodName" id="d1e229949__d1e230130">
+            <a class="xref" href="EventListener.html#d1e26615">EventListener</a>
+            <strong class="ph b clip_button">addEventListener</strong> (eventType:<em class="ph i">String</em>, handler:<em class="ph i">Varies File JavaScriptFunction</em>, [captures:<em class="ph i">Boolean</em>=Boolean])</p>
+
+         <p class="p description">Adds an event listener.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e620">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e626">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e632">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e620 ">
+                        <p class="p">eventType</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e626 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e632 ">
+                        <p class="p description">The event type.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e620 ">
+                        <p class="p">handler</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e626 ">
+                        <p class="p">
+                           <a class="xref" href="File.html#d1e5280">File</a>
+                        </p>
+
+                        <p class="p">JavaScriptFunction</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e632 ">
+                        <p class="p description">The event handler. Can accept: File or JavaScript Function.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e620 ">
+                        <p class="p">captures</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e626 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e632 ">
+                        <p class="p description">This parameter is obsolete. (Optional)</p>
+
+                        <p class="p"> (default: false)</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e229949__d1e230185">
+            <a class="xref" href="Path.html#d1e229949">Path</a>
+            <strong class="ph b clip_button">getElements</strong> ()</p>
+
+         <p class="p description">Resolves the object specifier, creating an array of object references.</p>
+
+         <p class="p methodName" id="d1e229949__d1e230197">undefined <strong class="ph b clip_button">remove</strong> ()</p>
+
+         <p class="p description">Deletes the Path.</p>
+
+         <p class="p methodName" id="d1e229949__d1e230202">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+            <strong class="ph b clip_button">removeEventListener</strong> (eventType:<em class="ph i">String</em>, handler:<em class="ph i">Varies File JavaScriptFunction</em>, [captures:<em class="ph i">Boolean</em>=Boolean])</p>
+
+         <p class="p description">Removes the event listener.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e785">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e791">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d2105494e797">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e785 ">
+                        <p class="p">eventType</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e791 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e797 ">
+                        <p class="p description">The registered event type.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e785 ">
+                        <p class="p">handler</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e791 ">
+                        <p class="p">
+                           <a class="xref" href="File.html#d1e5280">File</a>
+                        </p>
+
+                        <p class="p">JavaScriptFunction</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e797 ">
+                        <p class="p description">The registered event handler. Can accept: File or JavaScript Function.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e785 ">
+                        <p class="p">captures</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e791 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d2105494e797 ">
+                        <p class="p description">This parameter is obsolete. (Optional)</p>
+
+                        <p class="p"> (default: false)</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e229949__d1e230257">undefined <strong class="ph b clip_button">reverse</strong> ()</p>
+
+         <p class="p description">Reverses the path.</p>
+
+         <p class="p methodName" id="d1e229949__d1e230263">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toSource</strong> ()</p>
+
+         <p class="p description">Generates a string which, if executed, will return the Path.</p>
+
+         <p class="p methodName" id="d1e229949__d1e230273">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toSpecifier</strong> ()</p>
+
+         <p class="p description">Retrieves the object specifier.</p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Object of</h2>
+         
+         <p class="p noMargin">
+            <a class="xref" href="Event.html#d1e29436">Event</a>.parent</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="EventListener.html#d1e26615">EventListener</a>.parent</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="MutationEvent.html#d1e32881">MutationEvent</a>.parent</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="PathPoint.html#d1e230571">PathPoint</a>.parent</p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Return</h2>
+         
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230328">add</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Path.html#d1e229949">Path</a>.<a class="xref" href="Path.html#d1e229949__d1e230185">getElements</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230351">anyItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230371">everyItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230512">nextItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230536">previousItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230394">item</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230305">[]</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230427">itemByRange</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230384">firstItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230492">lastItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Paths.html#d1e230286">Paths</a>.<a class="xref" href="Paths.html#d1e230286__d1e230502">middleItem</a>()</p>
+
+      </div>
+
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2025" />
+<meta name="DC.rights.owner" content="(C) Copyright 2025" />
+<meta name="generator" content="DITA-OT" /><meta name="DC.type" content="topic" />
+<meta name="DC.title" content="HyperlinkExternalPageDestination" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="d1e101571" />
+<link rel="stylesheet" type="text/css" href="commonltr.css" />
+<title>HyperlinkExternalPageDestination</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css" />
+<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body id="d1e101571">
+
+   <h1 class="title topictitle1" id="ariaid-title1">
+      <span class="keyword">HyperlinkExternalPageDestination</span>
+   </h1>
+
+   <div class="body">
+      <p class="p description">A hyperlink destination that is a page in a document other than the document that contains the hyperlink source. For information on hyperlink sources, hyperlink page item source or hyperlink text source.</p>
+
+      <p class="p quicklinks">
+         Go to <strong class="ph b">
+            <a class="xref" href="#d1e101571__iProps">Property Listing</a>
+         </strong> | <strong class="ph b">
+            <a class="xref" href="#d1e101571__iMethods">Method Listing</a>
+         </strong>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Methods:</h2>
+         
+         <p class="p">
+            <a class="xref" href="#d1e101571__d1e101761">addEventListener</a>,  <a class="xref" href="#d1e101571__d1e101816">extractLabel</a>,  <a class="xref" href="#d1e101571__d1e101839">getElements</a>,  <a class="xref" href="#d1e101571__d1e101851">insertLabel</a>,  <a class="xref" href="#d1e101571__d1e101879">remove</a>,  <a class="xref" href="#d1e101571__d1e101885">removeEventListener</a>,  <a class="xref" href="#d1e101571__d1e101940">showDestination</a>,  <a class="xref" href="#d1e101571__d1e101945">toSource</a>,  <a class="xref" href="#d1e101571__d1e101955">toSpecifier</a>
+         </p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Objects:</h2>
+         
+         <p class="p">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>, <a class="xref" href="EventListeners.html#d1e29063">EventListeners</a>, <a class="xref" href="Events.html#d1e32369">Events</a>, <a class="xref" href="File.html#d1e5280">File</a>, <a class="xref" href="HyperlinkDestinationPageSetting.html#d1e85024">HyperlinkDestinationPageSetting</a>, <a class="xref" href="Number.html#d1e4548">Number</a>, <a class="xref" href="Object.html#d1e538">Object</a>, <a class="xref" href="String.html#d1e3790">String</a>, </p>
+
+      </div>
+
+      <div class="section" id="d1e101571__iProps"><h2 class="title sectiontitle">Property Listing</h2>
+         
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:20%" /><col style="width:10%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e150">
+                        <p class="p">Property</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e156">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e162">
+                        <p class="p">Access</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e168">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">destinationPageIndex</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a> (range 1 - 9999)</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The index of the page that the hyperlink destination points to. Note: Valid only when hyperlink destination is an external page.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">documentPath</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="File.html#d1e5280">File</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The path to the document that the hyperlink destination points to.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">eventListeners</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="EventListeners.html#d1e29063">EventListeners</a>
+                           <em class="ph i">
+                              <a class="xref" href="EventListener.html#d1e26615">EventListener</a>
+                           </em>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">A collection of event listeners.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">events</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Events.html#d1e32369">Events</a>
+                           <em class="ph i">
+                              <a class="xref" href="Event.html#d1e29436">Event</a>
+                           </em>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">A collection of events.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">hidden</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">If true, the hyperlink is hidden.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">id</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The unique ID of the HyperlinkExternalPageDestination.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">index</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The index of the HyperlinkExternalPageDestination within its containing object.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">isValid</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">Returns true if the object specifier resolves to valid objects.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">label</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">A property that can be set to any string.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The name of the HyperlinkExternalPageDestination.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">parent</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Document.html#d1e42948">Document</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The parent of the HyperlinkExternalPageDestination (a Document).</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">properties</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Object.html#d1e538">Object</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">A property that allows setting of several properties at the same time.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">viewBounds</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">Orderedarraycontainingtop:Unit</p>
+
+                        <p class="p">Bottom:Unit</p>
+
+                        <p class="p">Left:Unit</p>
+
+                        <p class="p">Right:Unit</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The view rectangle, specified in the format [y1, x1, y2, x2]. Note: Valid only when view setting is fixed. Can return: Ordered array containing top:Unit, left:Unit, bottom:Unit, right:Unit.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">viewPercentage</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a> (range 5 - 4000)</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The zoom percentage. (Range: 5 to 4000) Note: Valid only when view setting is fixed.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e150 ">
+                        <p class="p clip_button">viewSetting</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e156 ">
+                        <p class="p">
+                           <a class="xref" href="HyperlinkDestinationPageSetting.html#d1e85024">HyperlinkDestinationPageSetting</a>
+                        </p>
+
+                        <p class="p enumInPTable clip_button">HyperlinkDestinationPageSetting.FIT_HEIGHT</p>
+
+                        <p class="p enumInPTable clip_button">HyperlinkDestinationPageSetting.FIT_VIEW</p>
+
+                        <p class="p enumInPTable clip_button">HyperlinkDestinationPageSetting.FIT_VISIBLE</p>
+
+                        <p class="p enumInPTable clip_button">HyperlinkDestinationPageSetting.FIT_WIDTH</p>
+
+                        <p class="p enumInPTable clip_button">HyperlinkDestinationPageSetting.FIT_WINDOW</p>
+
+                        <p class="p enumInPTable clip_button">HyperlinkDestinationPageSetting.FIXED</p>
+
+                        <p class="p enumInPTable clip_button">HyperlinkDestinationPageSetting.INHERIT_ZOOM</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e162 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e168 ">
+                        <p class="p description">The destination page size when the page is reached by clicking the hyperlink.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+      <div class="section" id="d1e101571__iMethods"><h2 class="title sectiontitle">Method Listing</h2>
+         
+         <p class="p methodName" id="d1e101571__d1e101761">
+            <a class="xref" href="EventListener.html#d1e26615">EventListener</a>
+            <strong class="ph b clip_button">addEventListener</strong> (eventType:<em class="ph i">String</em>, handler:<em class="ph i">Varies File JavaScriptFunction</em>, [captures:<em class="ph i">Boolean</em>=Boolean])</p>
+
+         <p class="p description">Adds an event listener.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e733">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e739">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e745">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e733 ">
+                        <p class="p">eventType</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e739 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e745 ">
+                        <p class="p description">The event type.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e733 ">
+                        <p class="p">handler</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e739 ">
+                        <p class="p">
+                           <a class="xref" href="File.html#d1e5280">File</a>
+                        </p>
+
+                        <p class="p">JavaScriptFunction</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e745 ">
+                        <p class="p description">The event handler. Can accept: File or JavaScript Function.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e733 ">
+                        <p class="p">captures</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e739 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e745 ">
+                        <p class="p description">This parameter is obsolete. (Optional)</p>
+
+                        <p class="p"> (default: false)</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e101571__d1e101816">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">extractLabel</strong> (key:<em class="ph i">String</em>)</p>
+
+         <p class="p description">Gets the label value associated with the specified key.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e870">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e876">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e882">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e870 ">
+                        <p class="p">key</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e876 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e882 ">
+                        <p class="p description">The key.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e101571__d1e101839">
+            <a class="xref" href="HyperlinkExternalPageDestination.html#d1e101571">HyperlinkExternalPageDestination</a>
+            <strong class="ph b clip_button">getElements</strong> ()</p>
+
+         <p class="p description">Resolves the object specifier, creating an array of object references.</p>
+
+         <p class="p methodName" id="d1e101571__d1e101851">undefined <strong class="ph b clip_button">insertLabel</strong> (key:<em class="ph i">String</em>, value:<em class="ph i">String</em>)</p>
+
+         <p class="p description">Sets the label to the value associated with the specified key.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e963">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e969">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e975">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e963 ">
+                        <p class="p">key</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e969 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e975 ">
+                        <p class="p description">The key.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e963 ">
+                        <p class="p">value</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e969 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e975 ">
+                        <p class="p description">The value.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e101571__d1e101879">undefined <strong class="ph b clip_button">remove</strong> ()</p>
+
+         <p class="p description">Deletes the HyperlinkExternalPageDestination.</p>
+
+         <p class="p methodName" id="d1e101571__d1e101885">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+            <strong class="ph b clip_button">removeEventListener</strong> (eventType:<em class="ph i">String</em>, handler:<em class="ph i">Varies File JavaScriptFunction</em>, [captures:<em class="ph i">Boolean</em>=Boolean])</p>
+
+         <p class="p description">Removes the event listener.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e1083">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e1089">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d427775e1095">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1083 ">
+                        <p class="p">eventType</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1089 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1095 ">
+                        <p class="p description">The registered event type.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1083 ">
+                        <p class="p">handler</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1089 ">
+                        <p class="p">
+                           <a class="xref" href="File.html#d1e5280">File</a>
+                        </p>
+
+                        <p class="p">JavaScriptFunction</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1095 ">
+                        <p class="p description">The registered event handler. Can accept: File or JavaScript Function.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1083 ">
+                        <p class="p">captures</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1089 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d427775e1095 ">
+                        <p class="p description">This parameter is obsolete. (Optional)</p>
+
+                        <p class="p"> (default: false)</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e101571__d1e101940">undefined <strong class="ph b clip_button">showDestination</strong> ()</p>
+
+         <p class="p description">Jumps to the hyperlink destination.</p>
+
+         <p class="p methodName" id="d1e101571__d1e101945">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toSource</strong> ()</p>
+
+         <p class="p description">Generates a string which, if executed, will return the HyperlinkExternalPageDestination.</p>
+
+         <p class="p methodName" id="d1e101571__d1e101955">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toSpecifier</strong> ()</p>
+
+         <p class="p description">Retrieves the object specifier.</p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Object of</h2>
+         
+         <p class="p noMargin">
+            <a class="xref" href="Bookmark.html#d1e98044">Bookmark</a>.destination</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Event.html#d1e29436">Event</a>.parent</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="EventListener.html#d1e26615">EventListener</a>.parent</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="MutationEvent.html#d1e32881">MutationEvent</a>.parent</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Hyperlink.html#d1e97181">Hyperlink</a>.destination</p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Return</h2>
+         
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102009">add</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestination.html#d1e101571">HyperlinkExternalPageDestination</a>.<a class="xref" href="HyperlinkExternalPageDestination.html#d1e101571__d1e101839">getElements</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102042">anyItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102062">everyItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102250">nextItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102273">previousItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102118">itemByID</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102085">item</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e101986">[]</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102141">itemByName</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102164">itemByRange</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102075">firstItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102229">lastItem</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967">HyperlinkExternalPageDestinations</a>.<a class="xref" href="HyperlinkExternalPageDestinations.html#d1e101967__d1e102240">middleItem</a>()</p>
+
+      </div>
+
+   </div>
+
+</body>
+</html>

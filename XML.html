@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2025" />
+<meta name="DC.rights.owner" content="(C) Copyright 2025" />
+<meta name="generator" content="DITA-OT" /><meta name="DC.type" content="topic" />
+<meta name="DC.title" content="XML" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="d1e7824" />
+<link rel="stylesheet" type="text/css" href="commonltr.css" />
+<title>XML</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css" />
+<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body id="d1e7824">
+
+   <h1 class="title topictitle1" id="ariaid-title1">
+      <span class="keyword">XML</span>
+   </h1>
+
+   <div class="body">
+      <p class="p description">Wraps XML into an object.</p>
+
+      <p class="p quicklinks">
+         Go to <strong class="ph b">
+            <a class="xref" href="#d1e7824__iProps">Property Listing</a>
+         </strong> | <strong class="ph b">
+            <a class="xref" href="#d1e7824__iMethods">Method Listing</a>
+         </strong>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Methods:</h2>
+         
+         <p class="p">
+            <a class="xref" href="#d1e7824__d1e7832">XML</a>,  <a class="xref" href="#d1e7824__d1e7969">addNamespace</a>,  <a class="xref" href="#d1e7824__d1e7992">appendChild</a>,  <a class="xref" href="#d1e7824__d1e8017">attribute</a>,  <a class="xref" href="#d1e7824__d1e8040">attributes</a>,  <a class="xref" href="#d1e7824__d1e8050">child</a>,  <a class="xref" href="#d1e7824__d1e8076">childIndex</a>,  <a class="xref" href="#d1e7824__d1e8086">children</a>,  <a class="xref" href="#d1e7824__d1e8096">comments</a>,  <a class="xref" href="#d1e7824__d1e8106">contains</a>,  <a class="xref" href="#d1e7824__d1e8129">copy</a>,  <a class="xref" href="#d1e7824__d1e7921">defaultSettings</a>,  <a class="xref" href="#d1e7824__d1e8139">descendants</a>,  <a class="xref" href="#d1e7824__d1e8165">elements</a>,  <a class="xref" href="#d1e7824__d1e8188">hasComplexContent</a>,  <a class="xref" href="#d1e7824__d1e8200">hasSimpleContent</a>,  <a class="xref" href="#d1e7824__d1e8212">inScopeNamespaces</a>,  <a class="xref" href="#d1e7824__d1e8228">insertChildAfter</a>,  <a class="xref" href="#d1e7824__d1e8260">insertChildBefore</a>,  <a class="xref" href="#d1e7824__d1e8293">length</a>,  <a class="xref" href="#d1e7824__d1e8303">localName</a>,  <a class="xref" href="#d1e7824__d1e8315">name</a>,  <a class="xref" href="#d1e7824__d1e8325">namespace</a>,  <a class="xref" href="#d1e7824__d1e8335">namespaceDeclarations</a>,  <a class="xref" href="#d1e7824__d1e8345">nodeKind</a>,  <a class="xref" href="#d1e7824__d1e8356">normalize</a>,  <a class="xref" href="#d1e7824__d1e8366">parent</a>,  <a class="xref" href="#d1e7824__d1e8378">prependChild</a>,  <a class="xref" href="#d1e7824__d1e8401">processingInstructions</a>,  <a class="xref" href="#d1e7824__d1e8426">removeNamespace</a>,  <a class="xref" href="#d1e7824__d1e8449">replace</a>,  <a class="xref" href="#d1e7824__d1e8489">setChildren</a>,  <a class="xref" href="#d1e7824__d1e8512">setLocalName</a>,  <a class="xref" href="#d1e7824__d1e8532">setName</a>,  <a class="xref" href="#d1e7824__d1e8550">setNamespace</a>,  <a class="xref" href="#d1e7824__d1e7931">setSettings</a>,  <a class="xref" href="#d1e7824__d1e7953">settings</a>,  <a class="xref" href="#d1e7824__d1e8570">text</a>,  <a class="xref" href="#d1e7824__d1e8580">toString</a>,  <a class="xref" href="#d1e7824__d1e8593">toXMLString</a>,  <a class="xref" href="#d1e7824__d1e8612">xpath</a>
+         </p>
+
+      </div>
+
+      <div class="section" id="d1e7824__iEvents"><h2 class="title sectiontitle">Property Listing</h2>
+         
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:10%" /><col style="width:50%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e241">
+                        <p class="p">Name</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e247">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e253">
+                        <p class="p">Access</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e259">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e241 ">
+                        <p class="p clip_button">ignoreComments</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e247 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e253 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e259 ">
+                        <p class="p description">Controls whether XML comments should be parsed (false) or ignored (true).</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e241 ">
+                        <p class="p clip_button">ignoreProcessingInstructions</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e247 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e253 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e259 ">
+                        <p class="p description">Controls whether XML preprocessing instructions should be parsed (false) or ignored (true).</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e241 ">
+                        <p class="p clip_button">ignoreWhitespace</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e247 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e253 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e259 ">
+                        <p class="p description">Controls whether whitespace should be parsed (false) or ignored (true).</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e241 ">
+                        <p class="p clip_button">prettyIndent</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e247 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e253 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e259 ">
+                        <p class="p description">The number of spaces used to indent pretty-printed XML.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e241 ">
+                        <p class="p clip_button">prettyPrinting</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e247 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e253 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e259 ">
+                        <p class="p description">When true, XML is pretty-printed when converting to a string.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+      <div class="section" id="d1e7824__iMethods"><h2 class="title sectiontitle">Method Listing</h2>
+         
+         <p class="p noMarginConstructor">
+            <strong class="ph b">Constructor</strong>
+         </p>
+
+         <p class="p methodName" id="d1e7824__d1e7832">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">XML</strong> (text:<em class="ph i">String</em>)</p>
+
+         <p class="p description">Parses an XML string. Throws an error if the XML is incorrect.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e470">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e476">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e482">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e470 ">
+                        <p class="p">text</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e476 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e482 ">
+                        <p class="p description">The text to parse.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e7969">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">addNamespace</strong> (namespace:<em class="ph i">Namespace</em>)</p>
+
+         <p class="p description">Adds a namespace declaration to the node. Returns the XML object itself.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e551">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e557">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e563">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e551 ">
+                        <p class="p">namespace</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e557 ">
+                        <p class="p">
+                           <a class="xref" href="Namespace.html#d1e7736">Namespace</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e563 ">
+                        <p class="p description">The namespace to add.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e7992">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">appendChild</strong> (child:<em class="ph i">XML</em>)</p>
+
+         <p class="p description">Appends the given XML to this XML as a child. Returns the XML object itself.</p>
+
+         <p class="p description">If the argument is not XML, creates a new XML element containing the argument as text. The element name of that new XML is the same as the last element in the original XML.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e635">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e641">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e647">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e635 ">
+                        <p class="p">child</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e641 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e647 ">
+                        <p class="p description">The child XML to add.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8017">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">attribute</strong> (name:<em class="ph i">String</em>)</p>
+
+         <p class="p description">Returns a list containing all attribute elements matching the given name.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e715">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e721">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e727">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e715 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e721 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e727 ">
+                        <p class="p description">The attribute name to look for.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8040">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">attributes</strong> ()</p>
+
+         <p class="p description">Returns a list containing all attribute elements.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8050">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">child</strong> (name:<em class="ph i">String</em>)</p>
+
+         <p class="p description">Returns a list containing all children of this XML matching the given element name.</p>
+
+         <p class="p description">If the argument is a number, uses the number as index into the array of children.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e812">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e818">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e824">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e812 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e818 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e824 ">
+                        <p class="p description">The name or the index of the child element.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8076">
+            <a class="xref" href="Number.html#d1e4548">Number</a>
+            <strong class="ph b clip_button">childIndex</strong> ()</p>
+
+         <p class="p description">Returns a number representing the ordinal position of this XML object within the context of its parent.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8086">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">children</strong> ()</p>
+
+         <p class="p description">Returns an XML object containing all the properties of this XML object in order.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8096">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">comments</strong> ()</p>
+
+         <p class="p description">Returns an XML object containing the properties of this XML object that represent XML comments.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8106">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+            <strong class="ph b clip_button">contains</strong> (xml:<em class="ph i">XML</em>)</p>
+
+         <p class="p description">Checks if this XML object contains the given XML object.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e933">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e939">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e945">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e933 ">
+                        <p class="p">xml</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e939 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e945 ">
+                        <p class="p description">The XML to search for.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8129">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">copy</strong> ()</p>
+
+         <p class="p description">Creates a copy of this XML object.</p>
+
+         <p class="p methodName" id="d1e7824__d1e7921">
+            <a class="xref" href="Object.html#d1e538">Object</a>
+            <strong class="ph b clip_button">defaultSettings</strong> ()</p>
+
+         <p class="p description">Returns an object containing the default parsing and print settings for XML.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8139">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">descendants</strong> ([name:<em class="ph i">String</em>])</p>
+
+         <p class="p description">Returns all the XML-valued descendants of this XML object with the given name.</p>
+
+         <p class="p description">If the name parameter is omitted, returns all descendants of this XML object.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1043">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1049">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1055">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1043 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1049 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1055 ">
+                        <p class="p description">The name of the descendant to find.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8165">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">elements</strong> ([name:<em class="ph i">String</em>])</p>
+
+         <p class="p description">Returns a list of XML children that are elements with a given name, or all children that are XML elements.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1123">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1129">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1135">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1123 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1129 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1135 ">
+                        <p class="p description">The element name. If not supplied, gets all children that are XML elements.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8188">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+            <strong class="ph b clip_button">hasComplexContent</strong> ()</p>
+
+         <p class="p description">Reports whether this XML object contains complex content.</p>
+
+         <p class="p description">An XML object is considered to contain complex content if it represents an XML element that has child elements. XML objects representing attributes, comments, processing instructions and text nodes do not have complex content. The existence of attributes, comments, processing instructions and text nodes within an XML object is not significant in determining if it has complex content.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8200">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+            <strong class="ph b clip_button">hasSimpleContent</strong> ()</p>
+
+         <p class="p description">Reports whether this XML object contains simple content.</p>
+
+         <p class="p description">An XML object is considered to contain simple content if it represents a text node, represents an attribute node or if it represents an XML element that has no child elements. XML objects representing comments and processing instructions do not have simple content. The existence of attributes, comments, processing instructions and text nodes within an XML object is not significant in determining if it has simple content.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8212">
+            <a class="xref" href="Array.html#d1e835">Array</a>
+            <strong class="ph b clip_button">inScopeNamespaces</strong> ()</p>
+
+         <p class="p description">
+						Returns an array of Namespace objects mirroring the current list of valid namespaces at this element.
+					</p>
+
+         <p class="p description">The last element of the  returned array is the default namespace.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8228">undefined <strong class="ph b clip_button">insertChildAfter</strong> (child1:<em class="ph i">XML</em>, child2:<em class="ph i">XML</em>)</p>
+
+         <p class="p description">Inserts the given child2 after the given child1 in this XML object and returns this XML object.</p>
+
+         <p class="p description">If child1 is null, the method inserts child2 before all children of this XML object (that is, after none of them). If child1 does not exist in this XML object, the method returns without modifying this XML object.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1256">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1262">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1268">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1256 ">
+                        <p class="p">child1</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1262 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1268 ">
+                        <p class="p description">The child to insert the other child after.</p>
+
+                        <p class="p description">If null, the method inserts child2 before all children of this XML object.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1256 ">
+                        <p class="p">child2</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1262 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1268 ">
+                        <p class="p description">The XML to insert.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8260">undefined <strong class="ph b clip_button">insertChildBefore</strong> (child1:<em class="ph i">XML</em>, child2:<em class="ph i">XML</em>)</p>
+
+         <p class="p description">Inserts the given child2 before the given child1 in this XML object and returns this XML object.</p>
+
+         <p class="p description">If child1 is null, the method inserts child2 after all children of this XML object (that is, before none of them). If child1 does not exist in this XML object, the method returns without modifying this XML object.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1366">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1372">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1378">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1366 ">
+                        <p class="p">child1</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1372 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1378 ">
+                        <p class="p description">The child to search for.</p>
+
+                        <p class="p description">If null, the method inserts child2 after all children of this XML object.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1366 ">
+                        <p class="p">child2</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1372 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1378 ">
+                        <p class="p description">The XML to insert.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8293">
+            <a class="xref" href="Number.html#d1e4548">Number</a>
+            <strong class="ph b clip_button">length</strong> ()</p>
+
+         <p class="p description">Returns the number of elements contained in an XML list. If this XML object is not a list, returns 1.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8303">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">localName</strong> ()</p>
+
+         <p class="p description">Returns the local name of this XML object.</p>
+
+         <p class="p description">This value corresponds to the element name unless the name has a namespace prefix. For example, if the element has the name "ns:tag", the return value is "tag".</p>
+
+         <p class="p methodName" id="d1e7824__d1e8315">
+            <a class="xref" href="QName.html#d1e7646">QName</a>
+            <strong class="ph b clip_button">name</strong> ()</p>
+
+         <p class="p description">Returns a QName object containing the URI and the local name of the element.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8325">
+            <a class="xref" href="Namespace.html#d1e7736">Namespace</a>
+            <strong class="ph b clip_button">namespace</strong> ()</p>
+
+         <p class="p description">Returns a Namespace object containing the namespace URI of the current element.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8335">
+            <a class="xref" href="Array.html#d1e835">Array</a>
+            <strong class="ph b clip_button">namespaceDeclarations</strong> ()</p>
+
+         <p class="p description">Returns an array containing all namespace declarations of this XML object.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8345">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">nodeKind</strong> ()</p>
+
+         <p class="p description">Returns the type of this XML object as one of the strings "element", "attribute", "comment", "processing-instruction", or "text".</p>
+
+         <p class="p methodName" id="d1e7824__d1e8356">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">normalize</strong> ()</p>
+
+         <p class="p description">Puts all text nodes in this and all descendant XML objects into a normal form by merging adjacent text nodes and eliminating empty text nodes. Returns this XML object.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8366">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">parent</strong> ()</p>
+
+         <p class="p description">Returns the parent object of this XML object.</p>
+
+         <p class="p description">The root object, as returned by the XML constructor, does not have a parent and returns null. Note that the E4X standard does not define what happens if this XML object is a list containing elements with multiple parents.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8378">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">prependChild</strong> (child:<em class="ph i">XML</em>)</p>
+
+         <p class="p description">Inserts a given child into this object before its existing XML properties, and returns this XML object.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1588">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1594">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1600">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1588 ">
+                        <p class="p">child</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1594 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1600 ">
+                        <p class="p description">The XML to insert.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8401">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">processingInstructions</strong> ([name:<em class="ph i">String</em>])</p>
+
+         <p class="p description">Returns a list of preprocessing instructions.</p>
+
+         <p class="p description">Collects processing-instructions with the given name, if supplied. Otherwise, returns an XML list containing all the children of this XML object that are processing-instructions regardless of their name.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1671">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1677">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1683">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1671 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1677 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1683 ">
+                        <p class="p description">The name of the preprocessing instruction to return.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8426">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">removeNamespace</strong> (namespace:<em class="ph i">Namespace</em>)</p>
+
+         <p class="p description">Removes the given namespace from this XML, and returns this XML.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1752">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1758">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1764">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1752 ">
+                        <p class="p">namespace</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1758 ">
+                        <p class="p">
+                           <a class="xref" href="Namespace.html#d1e7736">Namespace</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1764 ">
+                        <p class="p description">The namespace to remove.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8449">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">replace</strong> (name:<em class="ph i">String</em>, value:<em class="ph i">XML</em>)</p>
+
+         <p class="p description">Replaces the value of specified XML properties of this XML object returns this XML object. </p>
+
+         <p class="p description">
+						This method acts like the assignment operator.
+					</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1839">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1845">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1851">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1839 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1845 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1851 ">
+                        <p class="p description">The property name.</p>
+
+                        <p class="p description">Can be a numeric property name, a name for a set of XML elements, or the properties wildcard “*”. If this XML object contains no properties that match the name, the method returns without modifying this XML object.  </p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1839 ">
+                        <p class="p">value</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1845 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1851 ">
+                        <p class="p description">The XML with which to replace the value of the matching property.</p>
+
+                        <p class="p description">Can be an XML object, XML list or any value that can be converted to a String with toString().</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8489">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">setChildren</strong> (value:<em class="ph i">XML</em>)</p>
+
+         <p class="p description">Replaces all of the XML-valued properties in this object with a new value, and returns this XML object. </p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1950">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1956">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e1962">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1950 ">
+                        <p class="p">value</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1956 ">
+                        <p class="p">
+                           <a class="xref" href="XML.html#d1e7824">XML</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e1962 ">
+                        <p class="p description">The new value, which can be a single XML object or an XML list.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8512">undefined <strong class="ph b clip_button">setLocalName</strong> (name:<em class="ph i">String</em>)</p>
+
+         <p class="p description">Replaces the local name of this XML object  with a string constructed from the given name</p>
+
+         <p class="p description">The local name is any part behind a colon character. If there is no colon, it is the entire name.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2030">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2036">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2042">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2030 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2036 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2042 ">
+                        <p class="p description">The name to set.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8532">undefined <strong class="ph b clip_button">setName</strong> (name:<em class="ph i">QName</em>)</p>
+
+         <p class="p description">Replaces the name of this XML object with the given QName object.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2106">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2112">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2118">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2106 ">
+                        <p class="p">name</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2112 ">
+                        <p class="p">
+                           <a class="xref" href="QName.html#d1e7646">QName</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2118 ">
+                        <p class="p description">The fully qualified name.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e8550">undefined <strong class="ph b clip_button">setNamespace</strong> (namespace:<em class="ph i">Namespace</em>)</p>
+
+         <p class="p description">Sets the namespace for this XML element. </p>
+
+         <p class="p description">If the namespace has not been declared in the tree above this element, adds a namespace declaration.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2186">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2192">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2198">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2186 ">
+                        <p class="p">namespace</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2192 ">
+                        <p class="p">
+                           <a class="xref" href="Namespace.html#d1e7736">Namespace</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2198 ">
+                        <p class="p description">The namespace to set.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e7931">undefined <strong class="ph b clip_button">setSettings</strong> (obj:<em class="ph i">Object</em>)</p>
+
+         <p class="p description">
+						Sets the parsing and print setting for XML using an object returned by the settings() method.
+					</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2262">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2268">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2274">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2262 ">
+                        <p class="p">obj</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2268 ">
+                        <p class="p">
+                           <a class="xref" href="Object.html#d1e538">Object</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2274 ">
+                        <p class="p description">The object containing the settings to set.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e7824__d1e7953">
+            <a class="xref" href="Object.html#d1e538">Object</a>
+            <strong class="ph b clip_button">settings</strong> ()</p>
+
+         <p class="p description">Returns an object containing the current parsing and print settings for XML.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8570">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">text</strong> ()</p>
+
+         <p class="p description">Returns an XML list containing all XML properties of this XML object that represent XML text nodes.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8580">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toString</strong> ()</p>
+
+         <p class="p description">Returns the string representation of this object.</p>
+
+         <p class="p description">For text and attribute nodes, this is the textual value of the node; for other elements, this is the result of calling the toXMLString() method. If this XML object is a list, concatenates the result of calling toString() on each element.</p>
+
+         <p class="p methodName" id="d1e7824__d1e8593">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toXMLString</strong> ()</p>
+
+         <p class="p description">Returns an XML-encoded string representation of this XML object.</p>
+
+         <p class="p description">
+						Always includes the start tag, attributes and end tag of the XML object regardless of its content. It is provided for cases when the default XML to string conversion rules are not desired. Interprets the global settings XML.prettyPrint and XML.prettyIndent.
+					</p>
+
+         <p class="p methodName" id="d1e7824__d1e8612">
+            <a class="xref" href="XML.html#d1e7824">XML</a>
+            <strong class="ph b clip_button">xpath</strong> (expr:<em class="ph i">String</em>)</p>
+
+         <p class="p description">Evaluates the given XPath expression in accordance with the W3C XPath recommendation, using this XML object as the context node.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2403">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2409">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d1737065e2415">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2403 ">
+                        <p class="p">expr</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2409 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d1737065e2415 ">
+                        <p class="p description">The XPath expression to use.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Return</h2>
+         
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e7969">addNamespace</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e7992">appendChild</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8129">copy</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8612">xpath</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8378">prependChild</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e7832">XML</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8356">normalize</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8426">removeNamespace</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8489">setChildren</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8449">replace</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8017">attribute</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8040">attributes</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8050">child</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8165">elements</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8401">processingInstructions</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8139">descendants</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8570">text</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8086">children</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8096">comments</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="XML.html#d1e7824">XML</a>.<a class="xref" href="XML.html#d1e7824__d1e8366">parent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="Reflection.html#d1e7502">Reflection</a>.<a class="xref" href="Reflection.html#d1e7502__d1e7633">toXML</a>()</p>
+
+      </div>
+
+   </div>
+
+</body>
+</html>

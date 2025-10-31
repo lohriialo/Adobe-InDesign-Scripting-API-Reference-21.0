@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2025" />
+<meta name="DC.rights.owner" content="(C) Copyright 2025" />
+<meta name="generator" content="DITA-OT" /><meta name="DC.type" content="topic" />
+<meta name="DC.title" content="Event (SUI)" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="d1e21433" />
+<link rel="stylesheet" type="text/css" href="commonltr.css" />
+<title>Event (SUI)</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css" />
+<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body id="d1e21433">
+
+   <h1 class="title topictitle1" id="ariaid-title1">
+      <span class="keyword">Event (SUI)</span>
+   </h1>
+
+   <div class="body">
+      <p class="p description">
+        Base class for UIEvent.
+      </p>
+
+      <p class="p description">Encapsulates input event information for an event that propagates through a container and control hierarchy.  Implements W3C standard event handling. </p>
+
+      <p class="p quicklinks">
+         Go to <strong class="ph b">
+            <a class="xref" href="#d1e21433__iProps">Property Listing</a>
+         </strong> | <strong class="ph b">
+            <a class="xref" href="#d1e21433__iMethods">Method Listing</a>
+         </strong>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Methods:</h2>
+         
+         <p class="p">
+            <a class="xref" href="#d1e21433__d1e21572">preventDefault</a>,  <a class="xref" href="#d1e21433__d1e21577">stopPropagation</a>
+         </p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Objects:</h2>
+         
+         <p class="p">
+            <a class="xref" href="Boolean.html#d1e4783">Boolean</a>, <a class="xref" href="Object.html#d1e538">Object</a>, <a class="xref" href="String.html#d1e3790">String</a>
+         </p>
+
+      </div>
+
+      <div class="section" id="d1e21433__iProps"><h2 class="title sectiontitle">Property Listing</h2>
+         
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:20%" /><col style="width:10%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e104">
+                        <p class="p">Property</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e110">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e116">
+                        <p class="p">Access</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e122">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">bubbles</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">True if the event is of a type that bubbles.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">cancelable</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">True if the default action associated with the event can be canceled with preventDefault().</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">captures</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">True if this event can be captured.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">currentTarget</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">
+                           <a class="xref" href="Boolean.html#d1e4783">Boolean</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">The event target object which is currently handling the event. During capturing and bubbling, this is different from the property target.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">eventPhase</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">The current phase of event propagation; one of none, target, capture, bubble.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">target</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">
+                           <a class="xref" href="Object.html#d1e538">Object</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">The event target object for this event.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">timeStamp</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">DateSUI</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">The date and time at which the event occurred.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e104 ">
+                        <p class="p clip_button">type</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e110 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e116 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e122 ">
+                        <p class="p description">The name of the event that this object represents.</p>
+
+                        <p class="p description">
+            Event types are listed in the JavaScript Tools Guide.
+          </p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+      <div class="section" id="d1e21433__iEvents"><h2 class="title sectiontitle">Property Listing</h2>
+         
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:10%" /><col style="width:50%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e406">
+                        <p class="p">Name</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e412">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e418">
+                        <p class="p">Access</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d575616e424">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e406 ">
+                        <p class="p clip_button">AT_TARGET</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e412 ">
+                        <p class="p">VariesSUI</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e418 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e424 "> </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e406 ">
+                        <p class="p clip_button">BUBBLING_PHASE</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e412 ">
+                        <p class="p">VariesSUI</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e418 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e424 "> </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e406 ">
+                        <p class="p clip_button">CAPTURING_PHASE</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e412 ">
+                        <p class="p">VariesSUI</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e418 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e424 "> </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e406 ">
+                        <p class="p clip_button">NOT_DISPATCHING</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e412 ">
+                        <p class="p">VariesSUI</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e418 ">
+                        <p class="p">readonly</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d575616e424 "> </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+      <div class="section" id="d1e21433__iMethods"><h2 class="title sectiontitle">Method Listing</h2>
+         
+         <p class="p methodName" id="d1e21433__d1e21572">undefined <strong class="ph b clip_button">preventDefault</strong> ()</p>
+
+         <p class="p description">Prevents the default action associated with this event from being called.</p>
+
+         <p class="p methodName" id="d1e21433__d1e21577">undefined <strong class="ph b clip_button">stopPropagation</strong> ()</p>
+
+         <p class="p description">Stops the propagation of this event.</p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Return</h2>
+         
+         <p class="p noMargin">
+            <a class="xref" href="EventsSUI.html#d1e21612">Events (SUI)</a>.<a class="xref" href="EventsSUI.html#d1e21612__d1e21626">createEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="StaticTextSUI.html#d1e11703">StaticText (SUI)</a>.<a class="xref" href="StaticTextSUI.html#d1e11703__d1e12093">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="ButtonSUI.html#d1e12232">Button (SUI)</a>.<a class="xref" href="ButtonSUI.html#d1e12232__d1e12626">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="IconButtonSUI.html#d1e12784">IconButton (SUI)</a>.<a class="xref" href="IconButtonSUI.html#d1e12784__d1e13151">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="EditTextSUI.html#d1e13309">EditText (SUI)</a>.<a class="xref" href="EditTextSUI.html#d1e13309__d1e13757">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="ListBoxSUI.html#d1e13931">ListBox (SUI)</a>.<a class="xref" href="ListBoxSUI.html#d1e13931__d1e14482">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="DropDownListSUI.html#d1e14703">DropDownList (SUI)</a>.<a class="xref" href="DropDownListSUI.html#d1e14703__d1e15163">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="CheckboxSUI.html#d1e15563">Checkbox (SUI)</a>.<a class="xref" href="CheckboxSUI.html#d1e15563__d1e15981">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="ScrollbarSUI.html#d1e16140">Scrollbar (SUI)</a>.<a class="xref" href="ScrollbarSUI.html#d1e16140__d1e16579">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="RadioButtonSUI.html#d1e16746">RadioButton (SUI)</a>.<a class="xref" href="RadioButtonSUI.html#d1e16746__d1e17162">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="SliderSUI.html#d1e17321">Slider (SUI)</a>.<a class="xref" href="SliderSUI.html#d1e17321__d1e17749">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="ProgressbarSUI.html#d1e17916">Progressbar (SUI)</a>.<a class="xref" href="ProgressbarSUI.html#d1e17916__d1e18278">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="TreeViewSUI.html#d1e18375">TreeView (SUI)</a>.<a class="xref" href="TreeViewSUI.html#d1e18375__d1e18823">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="FlashPlayerSUI.html#d1e19078">FlashPlayer (SUI)</a>.<a class="xref" href="FlashPlayerSUI.html#d1e19078__d1e19381">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="GroupSUI.html#d1e19593">Group (SUI)</a>.<a class="xref" href="GroupSUI.html#d1e19593__d1e20077">dispatchEvent</a>()</p>
+
+         <p class="p noMargin">
+            <a class="xref" href="PanelSUI.html#d1e20202">Panel (SUI)</a>.<a class="xref" href="PanelSUI.html#d1e20202__d1e20749">dispatchEvent</a>()</p>
+
+      </div>
+
+   </div>
+
+</body>
+</html>

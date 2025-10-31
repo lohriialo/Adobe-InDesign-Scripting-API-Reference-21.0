@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2025" />
+<meta name="DC.rights.owner" content="(C) Copyright 2025" />
+<meta name="generator" content="DITA-OT" /><meta name="DC.type" content="topic" />
+<meta name="DC.title" content="Array" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="d1e835" />
+<link rel="stylesheet" type="text/css" href="commonltr.css" />
+<title>Array</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css" />
+<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body id="d1e835">
+
+   <h1 class="title topictitle1" id="ariaid-title1">
+      <span class="keyword">Array</span>
+   </h1>
+
+   <div class="body">
+      <p class="p description">
+				An array with integer indexing and a length property.
+			</p>
+
+      <p class="p quicklinks">
+         Go to <strong class="ph b">
+            <a class="xref" href="#d1e835__iProps">Property Listing</a>
+         </strong> | <strong class="ph b">
+            <a class="xref" href="#d1e835__iMethods">Method Listing</a>
+         </strong>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Methods:</h2>
+         
+         <p class="p">
+            <a class="xref" href="#d1e835__d1e846">Array</a>,  <a class="xref" href="#d1e835__d1e906">concat</a>,  <a class="xref" href="#d1e835__d1e935">join</a>,  <a class="xref" href="#d1e835__d1e964">pop</a>,  <a class="xref" href="#d1e835__d1e978">push</a>,  <a class="xref" href="#d1e835__d1e1005">reverse</a>,  <a class="xref" href="#d1e835__d1e1020">shift</a>,  <a class="xref" href="#d1e835__d1e1034">slice</a>,  <a class="xref" href="#d1e835__d1e1048">sort</a>,  <a class="xref" href="#d1e835__d1e1070">splice</a>,  <a class="xref" href="#d1e835__d1e1123">toLocaleString</a>,  <a class="xref" href="#d1e835__d1e1133">toSource</a>,  <a class="xref" href="#d1e835__d1e1148">toString</a>,  <a class="xref" href="#d1e835__d1e1162">unshift</a>
+         </p>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Objects:</h2>
+         
+         <p class="p">
+            <a class="xref" href="Number.html#d1e4548">Number</a>
+         </p>
+
+      </div>
+
+      <div class="section" id="d1e835__iProps"><h2 class="title sectiontitle">Property Listing</h2>
+         
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:20%" /><col style="width:10%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e142">
+                        <p class="p">Property</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e148">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e154">
+                        <p class="p">Access</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e160">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e142 ">
+                        <p class="p clip_button">length</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e148 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e154 ">
+                        <p class="p">read/write</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e160 ">
+                        <p class="p description">The length of the array</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+      <div class="section" id="d1e835__iMethods"><h2 class="title sectiontitle">Method Listing</h2>
+         
+         <p class="p noMarginConstructor">
+            <strong class="ph b">Constructor</strong>
+         </p>
+
+         <p class="p methodName" id="d1e835__d1e846">
+            <a class="xref" href="Array.html#d1e835">Array</a>
+            <strong class="ph b clip_button">Array</strong> (length:<em class="ph i">Number</em>, [element:<em class="ph i">Varies</em>])</p>
+
+         <p class="p description">Creates and returns a new array.</p>
+
+         <p class="p description">Takes any number of parameters, which become the elements of the array, or a single value which becomes the length of an empty array. Note that you cannot create a one-element array, as the single parameter value is interpreted as the length. Returns the new array.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e255">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e261">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e267">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e255 ">
+                        <p class="p">length</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e261 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e267 ">
+                        <p class="p description">If no other parameters are passed, the initial length of the empty array.</p>
+
+                        <p class="p description">Otherwise, the first element.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e255 ">
+                        <p class="p">element</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e261 ">
+                        <p class="p">Varies</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e267 ">
+                        <p class="p description">If there is more than one parameter, the array is initialized with the given parameters.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e835__d1e906">
+            <a class="xref" href="Array.html#d1e835">Array</a>
+            <strong class="ph b clip_button">concat</strong> (value:<em class="ph i">Varies</em>)</p>
+
+         <p class="p description">Returns a new array created by concatenating the given values to the end of the original array.</p>
+
+         <p class="p description">The original array is unchanged.  If an array is provided as a parameter to concat(), each of its elements are appended as separate array elements at the end of the new array.  Returns a new array, the result of concatenation the given values to the end of the original array.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e362">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e368">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e374">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e362 ">
+                        <p class="p">value</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e368 ">
+                        <p class="p">Varies</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e374 ">
+                        <p class="p description">Any number of values to be added to the end of the array.</p>
+
+                        <p class="p description">Can also be arrays.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e835__d1e935">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">join</strong> ([delimiter:<em class="ph i">String</em>])</p>
+
+         <p class="p description">Joins all elements of the array into a string; optionally, each element is separated by delimiter.</p>
+
+         <p class="p description">Returns the string containing the joined elements and delimiters.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e445">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e451">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e457">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e445 ">
+                        <p class="p">delimiter</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e451 ">
+                        <p class="p">
+                           <a class="xref" href="String.html#d1e3790">String</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e457 ">
+                        <p class="p description">A string used to separate each element of the array.</p>
+
+                        <p class="p description">If omitted, the array elements are separated with a comma.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e835__d1e964">Varies <strong class="ph b clip_button">pop</strong> ()</p>
+
+         <p class="p description">Removes the last element from the array, decreases the length by 1, and returns the value of the element.</p>
+
+         <p class="p description">Returns the value of the deleted array element.</p>
+
+         <p class="p methodName" id="d1e835__d1e978">
+            <a class="xref" href="Number.html#d1e4548">Number</a>
+            <strong class="ph b clip_button">push</strong> (value:<em class="ph i">Number</em>)</p>
+
+         <p class="p description">Places one or more values onto the end of the array and increases length by n.</p>
+
+         <p class="p description">Returns the new length of the array.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e544">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e550">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e556">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e544 ">
+                        <p class="p">value</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e550 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e556 ">
+                        <p class="p description">Any number of values to be pushed onto the end of the array.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e835__d1e1005">
+            <a class="xref" href="Array.html#d1e835">Array</a>
+            <strong class="ph b clip_button">reverse</strong> ()</p>
+
+         <p class="p description">Reverses the order of the elements in the array.</p>
+
+         <p class="p description">Returns the reversed array.</p>
+
+         <p class="p methodName" id="d1e835__d1e1020">Varies <strong class="ph b clip_button">shift</strong> ()</p>
+
+         <p class="p description">Removes the first element from the array, decreases the length by 1, and returns the value of the element.</p>
+
+         <p class="p description">Returns the value of the deleted array element.</p>
+
+         <p class="p methodName" id="d1e835__d1e1034">
+            <a class="xref" href="Array.html#d1e835">Array</a>
+            <strong class="ph b clip_button">slice</strong> ()</p>
+
+         <p class="p description">Creates a new array, which contains a subset of the original array's elements.</p>
+
+         <p class="p description">The slice begins with the index start, and continues up to, but not including the index, end.  If start or end is a negative number, the indexed is resolved counting backwards from the end of the array resulting in the element array[array. length + negativeIndex]. Returns a new array containing elements array[start] through array[end-1].</p>
+
+         <p class="p methodName" id="d1e835__d1e1048">undefined <strong class="ph b clip_button">sort</strong> (userFunction:<em class="ph i">Function</em>)</p>
+
+         <p class="p description">Sorts the elements of the array in place, using the given function to compare to elements.</p>
+
+         <p class="p description">If no function is provided, the elements are sorted alphabetically.  Returns no return value.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e669">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e675">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e681">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e669 ">
+                        <p class="p">userFunction</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e675 ">
+                        <p class="p">
+                           <a class="xref" href="Function.html#d1e2964">Function</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e681 ">
+                        <p class="p description">A user-supplied function of the form userFunction(a, b) which returns less than 0 if a is greater than b, 0 if a and b are equal, and greater than 0 if b is greater than a.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e835__d1e1070">
+            <a class="xref" href="Array.html#d1e835">Array</a>
+            <strong class="ph b clip_button">splice</strong> (start:<em class="ph i">Number</em>, [num:<em class="ph i">Number</em>], [value:<em class="ph i">Varies</em>])</p>
+
+         <p class="p description">Removes num elements from the array beginning with index, start.</p>
+
+         <p class="p description">Optionally insert new elements beginning at index start.  To ensure contiguity, elements are moved up to fill in any gaps.  Returns a new array containing any elements deleted from the original array.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e759">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e765">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e771">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e759 ">
+                        <p class="p">start</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e765 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e771 ">
+                        <p class="p description">The index of the first element to remove. Negative values are relative to the end of the array.</p>
+
+                        <p class="p description"></p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e759 ">
+                        <p class="p">num</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e765 ">
+                        <p class="p">
+                           <a class="xref" href="Number.html#d1e4548">Number</a>
+                        </p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e771 ">
+                        <p class="p description">The number of array elements to remove, including start. If omitted, all elements from array index start to the end of the array are removed.</p>
+
+                        <p class="p description"></p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e759 ">
+                        <p class="p">value</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e765 ">
+                        <p class="p">Varies</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e771 ">
+                        <p class="p description">A list of one or more values to be added to the array starting at index start.</p>
+
+                        <p class="p description">Must specify a value for num, to use this argument.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+         <p class="p methodName" id="d1e835__d1e1123">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toLocaleString</strong> ()</p>
+
+         <p class="p description">Converts an array to a string and returns the string (localized).</p>
+
+         <p class="p methodName" id="d1e835__d1e1133">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toSource</strong> ()</p>
+
+         <p class="p description">
+						Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
+					</p>
+
+         <p class="p methodName" id="d1e835__d1e1148">
+            <a class="xref" href="String.html#d1e3790">String</a>
+            <strong class="ph b clip_button">toString</strong> ()</p>
+
+         <p class="p description">Converts an array to a string and returns the string.</p>
+
+         <p class="p description">Yields the same result as array. join() when called without a parameter.  Returns a comma-separated list of all the elements of the array.</p>
+
+         <p class="p methodName" id="d1e835__d1e1162">
+            <a class="xref" href="Number.html#d1e4548">Number</a>
+            <strong class="ph b clip_button">unshift</strong> (value:<em class="ph i">Varies</em>)</p>
+
+         <p class="p description">Adds one or more elements to the beginning of the array.</p>
+
+         <p class="p description">Returns the new array length.</p>
+
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table parameterTable" frame="border" border="1" rules="all"><colgroup><col style="width:30%" /><col style="width:10%" /><col style="width:60%" /></colgroup><thead class="thead" style="text-align:left;">
+                  <tr class="row">
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e939">
+                        <p class="p">Parameter</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e945">
+                        <p class="p">Type</p>
+
+                     </th>
+
+                     <th class="entry cellrowborder" style="vertical-align:top;" id="d907314e951">
+                        <p class="p">Description</p>
+
+                     </th>
+
+                  </tr>
+
+               </thead>
+<tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e939 ">
+                        <p class="p">value</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e945 ">
+                        <p class="p">Varies</p>
+
+                     </td>
+
+                     <td class="entry cellrowborder" style="vertical-align:top;" headers="d907314e951 ">
+                        <p class="p description">The values of one or more elements to be added to the beginning of the array.</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+</table>
+</div>
+
+      </div>
+
+   </div>
+
+</body>
+</html>
