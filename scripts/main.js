@@ -44,6 +44,7 @@
     
     // Initialize navigation when DOM is ready
     function initNavigation() {
+        ensureViewportMeta();
         // Extract navigation data from existing page structure
         extractNavigationData();
         
@@ -64,6 +65,20 @@
         
         // Set current page
         setCurrentPage();
+    }
+
+    function ensureViewportMeta() {
+        var head = document.head || document.getElementsByTagName('head')[0];
+        if (!head) {
+            return;
+        }
+        var existing = head.querySelector('meta[name="viewport"]');
+        if (!existing) {
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, initial-scale=1';
+            head.appendChild(meta);
+        }
     }
     
     function extractNavigationData() {
