@@ -41,24 +41,28 @@
         deepIndexingEnabled: false
     };
     var domParserInstance = null;
+    var cachedNavFromStorage = null;
     
     // Initialize navigation when DOM is ready
     function initNavigation() {
-        ensureViewportMeta();
+
+        // ensures that a webpage has a proper viewport meta tag for responsive design
+        ensureViewportMeta() 
+
         // Extract navigation data from existing page structure
         extractNavigationData();
         
-    // Create the layout structure
-    createLayoutStructure();
-        
-    // Populate left navigation
-    populateLeftNavigation();
+        // Create the layout structure
+        createLayoutStructure();
+            
+        // Populate left navigation
+        populateLeftNavigation();
 
-    // Initialize search capability
-    initializeSearch();
-        
-    // Setup event handlers
-    setupEventHandlers();
+        // Initialize search capability
+        initializeSearch();
+            
+        // Setup event handlers
+        setupEventHandlers();
         
         // Setup pane resizing
         setupPaneResizing();
@@ -81,20 +85,79 @@
         }
     }
     
+    function extractSectionTitle(topicHead) {
+        if (!topicHead) {
+            return '';
+        }
+        for (var i = 0; i < topicHead.childNodes.length; i++) {
+            var node = topicHead.childNodes[i];
+            if (node && node.nodeType === 3) {
+                var value = node.textContent.trim();
+                if (value) {
+                    return value;
+                }
+            }
+        }
+        if (topicHead.firstElementChild) {
+            return topicHead.firstElementChild.textContent.trim();
+        }
+        return topicHead.textContent.trim();
+    }
+
+    function deriveProductTitleFromDocument() {
+        var mapHeader = document.querySelector('ul.map > li.topichead');
+        if (mapHeader) {
+            var title = extractSectionTitle(mapHeader);
+            if (title && /extendscript api/i.test(title)) {
+                return title.trim();
+            }
+        }
+
+        var metaTitleEl = document.querySelector('meta[name="DC.title"]');
+        if (metaTitleEl) {
+            var metaTitle = metaTitleEl.getAttribute('content');
+            if (metaTitle && /extendscript api/i.test(metaTitle)) {
+                return metaTitle.trim();
+            }
+        }
+
+        if (document.title && /extendscript api/i.test(document.title)) {
+            return document.title.trim();
+        }
+
+        return '';
+    }
+
+    function escapeHtml(value) {
+        if (value === null || value === undefined) {
+            return '';
+        }
+        return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
     function extractNavigationData() {
         var mapEl = document.querySelector('ul.map');
         if (mapEl) {
             navData = {
-                sections: []
+                sections: [],
+                productTitle: ''
             };
             
             var topicHeads = mapEl.querySelectorAll('li.topichead');
             topicHeads.forEach(function(topicHead) {
-                var sectionTitle = topicHead.childNodes[0].textContent.trim();
+                var sectionTitle = extractSectionTitle(topicHead);
                 var section = {
                     title: sectionTitle,
                     items: []
                 };
+                if (!navData.productTitle && sectionTitle && /extendscript api/i.test(sectionTitle)) {
+                    navData.productTitle = sectionTitle;
+                }
                 
                 var itemsList = topicHead.querySelector('ul');
                 if (itemsList) {
@@ -114,7 +177,17 @@
                 navData.sections.push(section);
             });
 
+            if (!navData.productTitle) {
+                var derivedTitle = deriveProductTitleFromDocument();
+                if (derivedTitle) {
+                    navData.productTitle = derivedTitle;
+                } else {
+                    navData.productTitle = 'ExtendScript API';
+                }
+            }
+
             persistNavigationData(navData);
+            cachedNavFromStorage = navData;
             return;
         }
 
@@ -122,6 +195,11 @@
         var storedNavData = loadNavigationFromStorage();
         if (storedNavData) {
             navData = storedNavData;
+            if (!navData.productTitle) {
+                var recoveredTitle = deriveProductTitleFromDocument();
+                navData.productTitle = recoveredTitle || 'ExtendScript API';
+            }
+            cachedNavFromStorage = navData;
         }
     }
 
@@ -129,6 +207,7 @@
         try {
             if (window.localStorage && data && data.sections && data.sections.length) {
                 localStorage.setItem(NAV_STORAGE_KEY, JSON.stringify(data));
+                cachedNavFromStorage = data;
             }
         } catch (err) {
             console.warn('Unable to persist navigation data:', err);
@@ -151,6 +230,43 @@
         }
         return null;
     }
+
+    function getStoredNavData() {
+        if (cachedNavFromStorage) {
+            return cachedNavFromStorage;
+        }
+        var stored = loadNavigationFromStorage();
+        if (stored) {
+            if (!stored.productTitle) {
+                stored.productTitle = deriveProductTitleFromDocument() || 'ExtendScript API';
+            }
+            cachedNavFromStorage = stored;
+        }
+        return cachedNavFromStorage;
+    }
+
+    function getProductTitle() {
+        if (navData && navData.productTitle && navData.productTitle.trim()) {
+            return navData.productTitle.trim();
+        }
+        var storedNav = getStoredNavData();
+        if (storedNav && storedNav.productTitle && storedNav.productTitle.trim()) {
+            return storedNav.productTitle.trim();
+        }
+        var derived = deriveProductTitleFromDocument();
+        if (derived) {
+            return derived;
+        }
+        return 'ExtendScript API';
+    }
+
+    function updateHomeLinkLabel() {
+        var homeLink = document.querySelector('.nav-header-home');
+        if (!homeLink) {
+            return;
+        }
+        homeLink.textContent = getProductTitle();
+    }
     
     function createLayoutStructure() {
         var body = document.body;
@@ -163,14 +279,14 @@
             embeddedMap.parentElement.removeChild(embeddedMap);
         }
         existingContent = tempContainer.innerHTML;
+        var homeLinkLabel = escapeHtml(getProductTitle());
         
         // Create new layout structure
         body.innerHTML = `
             <div class="doc-container">
                 <div id="leftPane">
                     <div class="nav-header">
-                        <a class="nav-header-home" href="index.html">InDesign ExtendScript API</a>
-                        <button class="expand-all-btn" onclick="toggleAllSections()">Expand All</button>
+                        <a class="nav-header-home" href="index.html">${homeLinkLabel}</a>
                     </div>
                     <div class="search-container" id="navSearchContainer">
                         <form name="searchForm" id="searchForm" class="search-form" onsubmit="return false;">
@@ -179,6 +295,7 @@
                         <div class="search-feedback" id="searchStatus"></div>
                         <ul class="search-results" id="searchResults"></ul>
                     </div>
+                    <button class="expand-all-btn" onclick="toggleAllSections()">Expand All</button>
                     <ul class="nav-tree" id="navTree">
                         <!-- Navigation will be populated here -->
                     </ul>
@@ -189,6 +306,8 @@
                 </div>
             </div>
         `;
+
+        updateHomeLinkLabel();
     }
     
     function populateLeftNavigation() {
@@ -243,6 +362,7 @@
             navTree.appendChild(sectionLi);
         });
 
+        updateHomeLinkLabel();
         updateExpandAllButton();
     }
     

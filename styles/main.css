@@ -337,18 +337,18 @@ body {
 
 /* Expand/Collapse functionality */
 .expand-all-btn {
-    padding: 5px 10px;
-    margin: 6px 0 0 auto;
-    background-color: #eeeeee;
-    color: #295193;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.25rem 0.75rem;
+    background: #0088ce;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 0.875rem;
 }
 
 .expand-all-btn:hover {
-    background-color: #d3e1f1;
+    background: #0069a3;
 }
 
 /* Mobile responsiveness */
