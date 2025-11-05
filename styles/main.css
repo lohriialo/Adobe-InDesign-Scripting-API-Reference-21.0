@@ -112,6 +112,17 @@ body {
     flex-shrink: 0;
 }
 
+#leftPane .nav-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+#leftPane .nav-content .expand-all-btn {
+    flex-shrink: 0;
+}
+
 #leftPane .search-container.has-query {
     border-bottom-color: #d3e1f1;
 }
@@ -444,7 +455,7 @@ body {
         max-height: 50vh;
     }
     
-    .nav-content {
+    #leftPane .nav-content {
         display: none;
         background-color: #ffffff;
         border-top: 1px solid #e0e0e0;
@@ -593,7 +604,7 @@ body {
 
 /* Very small screens */
 @media (max-width: 480px) {
-    .nav-content {
+    #leftPane .nav-content {
         max-height: 40vh;
     }
     
