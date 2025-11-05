@@ -287,6 +287,7 @@
                 <div id="leftPane">
                     <div class="nav-header">
                         <a class="nav-header-home" href="index.html">${homeLinkLabel}</a>
+                        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
                     </div>
                     <div class="search-container" id="navSearchContainer">
                         <form name="searchForm" id="searchForm" class="search-form" onsubmit="return false;">
@@ -295,10 +296,12 @@
                         <div class="search-feedback" id="searchStatus"></div>
                         <ul class="search-results" id="searchResults"></ul>
                     </div>
-                    <button class="expand-all-btn" onclick="toggleAllSections()">Expand All</button>
-                    <ul class="nav-tree" id="navTree">
-                        <!-- Navigation will be populated here -->
-                    </ul>
+                    <div class="nav-content" id="navContent">
+                        <button class="expand-all-btn" onclick="toggleAllSections()">Expand All</button>
+                        <ul class="nav-tree" id="navTree">
+                            <!-- Navigation will be populated here -->
+                        </ul>
+                    </div>
                 </div>
                 <div class="pane-resizer" id="paneResizer"></div>
                 <div id="contentPane">
@@ -308,6 +311,7 @@
         `;
 
         updateHomeLinkLabel();
+        setupMobileNavToggle();
     }
     
     function populateLeftNavigation() {
@@ -1138,6 +1142,66 @@
         return entry.type + '|' + entry.titleLower + '|' + entry.href;
     }
     
+    function setupMobileNavToggle() {
+        var toggleBtn = document.getElementById('mobileNavToggle');
+        var navContent = document.getElementById('navContent');
+        var leftPane = document.getElementById('leftPane');
+        
+        if (!toggleBtn || !navContent) return;
+        
+        toggleBtn.addEventListener('click', function() {
+            var isExpanded = leftPane.classList.contains('nav-expanded');
+            
+            if (isExpanded) {
+                leftPane.classList.remove('nav-expanded');
+                toggleBtn.textContent = '☰';
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            } else {
+                leftPane.classList.add('nav-expanded');
+                toggleBtn.textContent = '✕';
+                toggleBtn.setAttribute('aria-expanded', 'true');
+            }
+        });
+        
+        // Close mobile nav when clicking on content area
+        var contentPane = document.getElementById('contentPane');
+        if (contentPane) {
+            contentPane.addEventListener('click', function() {
+                if (leftPane.classList.contains('nav-expanded')) {
+                    leftPane.classList.remove('nav-expanded');
+                    toggleBtn.textContent = '☰';
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+        
+        // Close mobile nav when selecting a navigation item
+        document.addEventListener('click', function(event) {
+            var navItem = event.target.closest('.nav-item a');
+            if (navItem && leftPane.classList.contains('nav-expanded')) {
+                setTimeout(function() {
+                    leftPane.classList.remove('nav-expanded');
+                    toggleBtn.textContent = '☰';
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                }, 100);
+            }
+        });
+        
+        // Improve focus management for mobile
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-controls', 'navContent');
+        
+        // Handle escape key to close mobile nav
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && leftPane.classList.contains('nav-expanded')) {
+                leftPane.classList.remove('nav-expanded');
+                toggleBtn.textContent = '☰';
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                toggleBtn.focus();
+            }
+        });
+    }
+
     // Make functions globally available for onclick handlers
     window.toggleAllSections = toggleAllSections;
     

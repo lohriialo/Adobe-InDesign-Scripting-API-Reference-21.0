@@ -87,6 +87,24 @@ body {
     text-decoration: underline;
 }
 
+/* Mobile navigation toggle */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    color: #295193;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.mobile-nav-toggle:hover {
+    background-color: rgba(211, 225, 241, 0.5);
+    border-radius: 4px;
+}
+
 #leftPane .search-container {
     padding: 12px 14px 0 14px;
     background-color: #fafafa;
@@ -109,18 +127,37 @@ body {
     border-radius: 4px;
     font-size: 15px;
     color: #1d1d1d;
+    text-align: center;
 }
 
 #leftPane .search-form .textToSearch:focus {
     outline: none;
     border-color: #295193;
     box-shadow: 0 0 0 2px rgba(41, 81, 147, 0.15);
+    text-align: left;
+}
+
+#leftPane .search-form .textToSearch::-webkit-input-placeholder {
+    text-align: center;
+}
+
+#leftPane .search-form .textToSearch::-moz-placeholder {
+    text-align: center;
+}
+
+#leftPane .search-form .textToSearch:-ms-input-placeholder {
+    text-align: center;
+}
+
+#leftPane .search-form .textToSearch::placeholder {
+    text-align: center;
 }
 
 #leftPane .search-feedback {
     margin: 8px 0 6px 0;
     font-size: 15px;
     color: #555555;
+    text-align: center;
 }
 
 #leftPane .search-results {
@@ -337,7 +374,7 @@ body {
 
 /* Expand/Collapse functionality */
 .expand-all-btn {
-    margin: 0.5rem 0 1rem 0;
+    margin: 0.5rem auto 1rem auto;
     padding: 0.25rem 0.75rem;
     background: #0088ce;
     color: #fff;
@@ -345,6 +382,9 @@ body {
     border-radius: 3px;
     cursor: pointer;
     font-size: 0.875rem;
+    display: block !important;
+    text-align: center;
+    max-width: 220px;
 }
 
 .expand-all-btn:hover {
@@ -353,27 +393,269 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    #leftPane {
-        width: 240px;
-        min-width: 240px;
+    body {
+        overflow-x: hidden;
     }
     
     .doc-container {
         flex-direction: column;
+        height: 100vh;
     }
     
     #leftPane {
-        height: 220px;
         width: 100%;
         min-width: auto;
+        max-width: none;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        z-index: 1000;
+        flex-shrink: 0;
+    }
+    
+    #leftPane .nav-header {
+        position: relative;
+        z-index: 1001;
+        padding: 12px 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .mobile-nav-toggle {
+        display: block !important;
+    }
+    
+    #leftPane .search-container {
+        position: sticky;
+        top: 60px; /* Account for nav header height */
+        z-index: 1000;
+        background-color: #fafafa;
+        border-bottom: 1px solid #e0e0e0;
+        display: block !important;
+        max-height: 40vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #leftPane .search-container.has-query {
+        border-bottom-color: #d3e1f1;
+        max-height: 50vh;
+    }
+    
+    .nav-content {
+        display: none;
+        background-color: #ffffff;
+        border-top: 1px solid #e0e0e0;
+        max-height: 40vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        z-index: 999;
+    }
+    
+    #leftPane.nav-expanded .nav-content {
+        display: block;
+    }
+    
+    #leftPane ul.nav-tree {
+        max-height: none;
+        overflow-y: visible;
+        padding-bottom: 20px;
     }
     
     #contentPane {
         flex: 1;
-        height: calc(100vh - 220px);
+        height: auto;
+        min-height: 0;
+        padding: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
     
     .pane-resizer {
         display: none;
+    }
+    
+    /* Mobile search feedback styling */
+    #leftPane .search-feedback {
+        padding: 4px 8px;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    
+    /* Improve touch targets */
+    #leftPane ul.nav-tree li.nav-section > .nav-section-header {
+        padding: 12px 18px;
+        font-size: 16px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    #leftPane ul.nav-tree li.nav-item {
+        padding: 8px 26px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    #leftPane ul.nav-tree li.nav-item a {
+        padding: 8px 0;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    
+    #leftPane .search-form .textToSearch {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 8px 12px;
+        min-height: 44px;
+    }
+    
+    .expand-all-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 8px auto;
+        min-height: 44px;
+        display: block !important;
+        text-align: center;
+        max-width: 240px;
+    }
+    
+    /* Content area improvements */
+    #contentPane table {
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        border: 1px solid #ccc;
+    }
+    
+    #contentPane table thead,
+    #contentPane table tbody {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    #contentPane th,
+    #contentPane td {
+        padding: 8px 6px;
+        word-break: break-word;
+        white-space: normal;
+        vertical-align: top;
+        min-width: 100px;
+    }
+    
+    /* Property table specific styling */
+    #contentPane table.table th:first-child,
+    #contentPane table.table td:first-child {
+        min-width: 120px;
+        font-weight: bold;
+    }
+    
+    #contentPane table.table th:nth-child(2),
+    #contentPane table.table td:nth-child(2) {
+        min-width: 80px;
+    }
+    
+    #contentPane table.table th:nth-child(3),
+    #contentPane table.table td:nth-child(3) {
+        min-width: 70px;
+    }
+    
+    #contentPane table.table th:last-child,
+    #contentPane table.table td:last-child {
+        min-width: 150px;
+    }
+    
+    /* Better spacing for mobile */
+    #contentPane h1.title.topictitle1 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+    
+    #contentPane h2.title.sectiontitle {
+        font-size: 20px;
+        line-height: 1.3;
+        margin: 20px 0 12px 0;
+    }
+    
+    #contentPane p {
+        line-height: 1.5;
+        margin: 8px 0;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .nav-content {
+        max-height: 40vh;
+    }
+    
+    #contentPane {
+        padding: 8px;
+    }
+    
+    #leftPane ul.nav-tree li.nav-section > .nav-section-header {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+    
+    #leftPane ul.nav-tree li.nav-item {
+        padding: 6px 22px;
+    }
+    
+    #leftPane ul.nav-tree li.nav-item a {
+        font-size: 14px;
+    }
+    
+    #contentPane h1.title.topictitle1 {
+        font-size: 20px;
+    }
+    
+    #contentPane h2.title.sectiontitle {
+        font-size: 18px;
+    }
+    
+    /* Make tables more mobile friendly */
+    #contentPane table {
+        font-size: 13px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    
+    #contentPane th,
+    #contentPane td {
+        padding: 6px 4px;
+        font-size: 13px;
+        min-width: 80px;
+    }
+    
+    /* Better touch targets for mobile */
+    .mobile-nav-toggle {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+/* Landscape phones and small tablets */
+@media (max-width: 768px) and (orientation: landscape) {
+    #leftPane {
+        max-height: 45vh;
+    }
+    
+    #leftPane ul.nav-tree {
+        max-height: 25vh;
+    }
+    
+    #contentPane {
+        min-height: 55vh;
     }
 }
