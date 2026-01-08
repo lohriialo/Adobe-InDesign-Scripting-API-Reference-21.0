@@ -38,7 +38,9 @@
         debounceTimer: null,
         entryKeys: new Set(),
         elements: null,
-        deepIndexingEnabled: false
+        deepIndexingEnabled: false,
+        indexLoaded: false,
+        indexFile: 'search-index.json'
     };
     var domParserInstance = null;
     var cachedNavFromStorage = null;
@@ -703,7 +705,47 @@
         });
 
         updateSearchFeedback();
-        scheduleIndexing();
+        loadSearchIndexFromFile();
+    }
+
+    function loadSearchIndexFromFile() {
+        if (!searchState.deepIndexingEnabled) {
+            searchState.indexLoaded = true;
+            scheduleIndexing();
+            return;
+        }
+
+        fetch(searchState.indexFile)
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('Index file not found');
+                }
+                return response.json();
+            })
+            .then(function(indexData) {
+                if (indexData && indexData.entries && Array.isArray(indexData.entries)) {
+                    console.log('Search index loaded from file:', indexData.entries.length, 'entries');
+                    searchState.extraEntries = indexData.entries;
+                    searchState.entryKeys.clear();
+                    searchState.baseEntries.forEach(function(entry) {
+                        searchState.entryKeys.add(entryKey(entry));
+                    });
+                    indexData.entries.forEach(function(entry) {
+                        searchState.entryKeys.add(entryKey(entry));
+                    });
+                    searchState.indexLoaded = true;
+                    searchState.indexing = false;
+                    updateSearchFeedback(searchState.activeQuery, null);
+                    if (searchState.activeQuery && searchState.activeQuery.length >= 2) {
+                        performSearch(searchState.activeQuery);
+                    }
+                }
+            })
+            .catch(function(error) {
+                console.log('Search index file not found, will build dynamically');
+                searchState.indexLoaded = false;
+                scheduleIndexing();
+            });
     }
 
     function prepareBaseSearchEntries() {
@@ -950,6 +992,10 @@
 
     function scheduleIndexing() {
         if (!searchState.deepIndexingEnabled) {
+            searchState.indexing = false;
+            return;
+        }
+        if (searchState.indexLoaded) {
             searchState.indexing = false;
             return;
         }
