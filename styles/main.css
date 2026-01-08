@@ -173,7 +173,7 @@ body {
 
 #leftPane .search-results {
     list-style: none;
-    max-height: 240px;
+    max-height: 320px;
     overflow-y: auto;
     margin: 0;
     padding: 0 0 8px 0;
@@ -202,6 +202,28 @@ body {
     font-size: 15px;
     color: #666666;
     margin-top: 2px;
+}
+
+/* Search result type indicators */
+#leftPane .search-result-object .result-meta::before {
+    content: "○ ";
+    font-weight: bold;
+}
+
+#leftPane .search-result-method .result-meta::before {
+    content: "ƒ ";
+    font-weight: bold;
+}
+
+#leftPane .search-result-property .result-meta::before {
+    content: "◆ ";
+    font-weight: bold;
+}
+
+#leftPane .search-result-value .result-meta::before,
+#leftPane .search-result-constant .result-meta::before {
+    content: "◇ ";
+    font-weight: bold;
 }
 
 #leftPane ul.nav-tree {

@@ -774,7 +774,7 @@
             return a.entry.title.localeCompare(b.entry.title);
         });
 
-        var topResults = matches.slice(0, 50).map(function(item) {
+        var topResults = matches.slice(0, 100).map(function(item) {
             return item.entry;
         });
 
@@ -782,18 +782,52 @@
     }
 
     function evaluateMatch(entry, normalizedQuery) {
-        if (entry.titleLower === normalizedQuery) {
+        var titleLower = entry.titleLower;
+        var searchBlob = entry.searchBlob || '';
+        
+        // Exact match - highest priority
+        if (titleLower === normalizedQuery) {
             return 0;
         }
-        if (entry.titleLower.indexOf(normalizedQuery) === 0) {
+        
+        // Starts with query - very high priority
+        if (titleLower.indexOf(normalizedQuery) === 0) {
             return 1;
         }
-        if (entry.titleLower.indexOf(normalizedQuery) !== -1) {
+        
+        // Query appears in title - high priority
+        var titleIndex = titleLower.indexOf(normalizedQuery);
+        if (titleIndex !== -1) {
             return 2;
         }
-        if (entry.searchBlob && entry.searchBlob.indexOf(normalizedQuery) !== -1) {
-            return 3;
+        
+        // Check for word boundary matches in title (e.g., "CONTENT" matches "CONTENT_AWARE_FITTING")
+        var titleParts = titleLower.split(/[._\s-]+/);
+        for (var i = 0; i < titleParts.length; i++) {
+            if (titleParts[i] === normalizedQuery) {
+                return 2.5; // Between substring match and blob match
+            }
+            if (titleParts[i].indexOf(normalizedQuery) === 0) {
+                return 3;
+            }
         }
+        
+        // Match in search blob (context, description, keywords) - lower priority
+        if (searchBlob && searchBlob.indexOf(normalizedQuery) !== -1) {
+            return 4;
+        }
+        
+        // Try fuzzy matching for partial words in search blob
+        var queryWords = normalizedQuery.split(/\s+/);
+        if (queryWords.length > 1 && searchBlob) {
+            var allWordsMatch = queryWords.every(function(word) {
+                return searchBlob.indexOf(word) !== -1;
+            });
+            if (allWordsMatch) {
+                return 5;
+            }
+        }
+        
         return Infinity;
     }
 
@@ -1040,7 +1074,7 @@
                 });
             }
 
-            if (headingText.indexOf('property') !== -1) {
+            if (headingText.indexOf('property') !== -1 || headingText.indexOf('properties') !== -1) {
                 var propertyNames = collectPropertyNames(section);
                 var anchorId = section.getAttribute('id');
                 var anchorHref = anchorId ? baseHref + '#' + anchorId : baseHref;
@@ -1061,6 +1095,80 @@
                     });
                 }
             }
+
+            // Index values/constants/enums (like CONTENT_AWARE_FITTING)
+            if (headingText.indexOf('value') !== -1 || headingText.indexOf('constant') !== -1) {
+                var valueRows = section.querySelectorAll('table tbody tr');
+                valueRows.forEach(function(row) {
+                    var cells = row.querySelectorAll('td');
+                    if (!cells.length) {
+                        return;
+                    }
+                    var nameCell = cells[0];
+                    var descCell = cells.length > 1 ? cells[1] : null;
+                    
+                    // Extract the value name (e.g., "Fitting.CONTENT_AWARE_FITTING")
+                    var clipButton = nameCell.querySelector('.clip_button');
+                    var text = clipButton ? clipButton.textContent.trim() : nameCell.textContent.trim();
+                    
+                    if (!text) {
+                        return;
+                    }
+                    
+                    // Get description for better search context
+                    var description = descCell ? descCell.textContent.trim() : '';
+                    var keywords = description ? description.toLowerCase() : '';
+                    
+                    // Use section anchor or base href
+                    var anchorId = section.getAttribute('id');
+                    var resolved = anchorId ? baseHref + '#' + anchorId : baseHref;
+                    
+                    pushEntry(buildSearchEntry('value', text, resolved, { 
+                        context: pageTitle, 
+                        keywords: keywords 
+                    }));
+                });
+            }
+        });
+
+        // Also index all tables that might contain constants/values outside of sections
+        var allTables = doc.querySelectorAll('table');
+        allTables.forEach(function(table) {
+            // Check if table has class indicators or if it's in body
+            var inSection = table.closest('div.section');
+            if (inSection) {
+                return; // Already processed in sections
+            }
+            
+            var rows = table.querySelectorAll('tbody tr');
+            rows.forEach(function(row) {
+                var cells = row.querySelectorAll('td');
+                if (cells.length < 1) {
+                    return;
+                }
+                var nameCell = cells[0];
+                var descCell = cells.length > 1 ? cells[1] : null;
+                
+                // Look for clip_button or structured content
+                var clipButton = nameCell.querySelector('.clip_button');
+                if (!clipButton) {
+                    return;
+                }
+                
+                var text = clipButton.textContent.trim();
+                if (!text) {
+                    return;
+                }
+                
+                // Get description for context
+                var description = descCell ? descCell.textContent.trim() : '';
+                var keywords = description ? description.toLowerCase() : '';
+                
+                pushEntry(buildSearchEntry('constant', text, baseHref, { 
+                    context: pageTitle,
+                    keywords: keywords
+                }));
+            });
         });
 
         return entries;
